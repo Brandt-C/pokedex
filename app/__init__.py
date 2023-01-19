@@ -7,4 +7,3 @@ app.config.from_object(Config)
 
 
 from . import routes
-from . import models

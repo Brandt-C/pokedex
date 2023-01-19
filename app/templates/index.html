@@ -12,14 +12,31 @@
 <body>
 
     {% block content %}
-    <h1>Pokedex</h1>
-    <form method="GET" class="container col-2">
-        {{ form.hidden_tag() }} 
+    <div class="container col-4 my-5 p-3 bg-danger">
+        <div class="row text-center my-5 text-white">
+            <h1>Pokedex</h1>
+        </div>
+        <div class="row my-5 d-flex justify-content-center text-white">
+            <form method="GET" class="col-8">
 
-        {{ form.choice(class='form-control', placeholder = 'Choose Your Pokemon!') }}
- 
-        {{ form.submit(class='btn btn-primary') }}
-    </form>
+                {{ poke.hidden_tag() }}
+
+                {{ poke.choose(class='form-control', placeholder = 'Choose Your Pokemon!') }}
+                
+                <div class="d-flex my-2 justify-content-center">
+                    {{ poke.submit(class='btn btn-white bg-body-secondary') }}
+                </div>
+                <br>
+            <div class="text-center bg-secondary">
+                <div class="d-flex justify-content-center">
+                    <img src="{{image}}">
+                </div>
+                <br>
+                    {{ info }}
+            </div>
+            </form>
+        </div>
+    </div>
 
     {%endblock%}
 </body>
