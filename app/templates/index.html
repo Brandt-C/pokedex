@@ -17,7 +17,7 @@
             <h1>Pokedex</h1>
         </div>
         <div class="row my-5 d-flex justify-content-center text-white">
-            <form method="GET" class="col-8">
+            <form method="POST" class="col-8">
 
                 {{ poke.hidden_tag() }}
 
@@ -28,11 +28,13 @@
                 </div>
                 <br>
             <div class="text-center bg-secondary">
-                <div class="d-flex justify-content-center">
-                    <img src="{{image}}">
-                </div>
-                <br>
-                    {{ info }}
+                <img src="{{pokemon_dict['Front Shiny']}}">
+                <p>Name: {{ pokemon_dict["Name"] }}</p>
+                <p>Ability:  {{pokemon_dict["Ability"]}}</p>
+                <p>Base XP:  {{pokemon_dict["Base XP"]}}</p>
+                <p>Base HP:  {{pokemon_dict["Base HP"]}}</p>
+                <p>Base Attack:  {{pokemon_dict["Base ATK"]}}</p>
+                <p>Base Defense:  {{pokemon_dict["Base DEF"]}}</p>
             </div>
             </form>
         </div>
